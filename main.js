@@ -5,14 +5,14 @@ keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
 
-// Write named functions that change the color of the keys below
+// These are the functions that change the color of the keys below
 const keyPlay = (event) => {
   event.target.style.backgroundColor = '#03d3fc'
 }
 const keyReturn = (event) => {
   event.target.style.backgroundColor = ''
 }
-// Write a named function with event handler properties
+// This is the function with event handler properties
 function eventAssignment(note) {
   note.onmousedown = function() {
     keyPlay(event)
@@ -22,7 +22,7 @@ function eventAssignment(note) {
   }
 }
 
-// Write a loop that runs the array elements through the function
+// This is a loop that runs the array elements through the function
 notes.forEach(eventAssignment)
 
 // These variables store the buttons that progress the user through the lyrics
@@ -39,7 +39,7 @@ nextTwo.hidden = true;
 nextThree.hidden = true;
 startOver.hidden= true;
 
-// Write anonymous event handler property and function for the first progress button
+// This is the event handler property and function for the first progress button
 nextOne.onclick = function() {
   nextTwo.hidden = false
   nextOne.hidden = true
@@ -47,7 +47,7 @@ nextOne.onclick = function() {
   document.getElementById("letter-note-six").innerHTML = "C"
 }
   
-  //te anonymous event handler property and function for the second progress button
+  // This is the event handler property and function for the second progress button
 nextTwo.onclick = function() {
   nextThree.hidden = false
   nextTwo.hidden = true
@@ -60,7 +60,7 @@ nextTwo.onclick = function() {
   lastLyric.style.display = 'inline-block'
 }
 
-// Write anonymous event handler property and function for the third progress button
+// This is the event handler property and function for the third progress button
 nextThree.onclick = function() {
   startOver.hidden = false
   nextThree.hidden = true
